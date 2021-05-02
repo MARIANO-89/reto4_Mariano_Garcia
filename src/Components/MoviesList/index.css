@@ -1,0 +1,10 @@
+.moviesList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie {
+    width: 18rem;
+    margin: 0.5rem;
+}
