@@ -5,7 +5,7 @@ import './index.css';
 function Header() {
     const [value, setValue] = useState('');
     const dispatch = useDispatch();
-    function searching() {
+    const searching = () => {
         if (value.length > 0) {
             fetch(
                 'https://api.themoviedb.org/3/search/movie?api_key=7559ebc59bb34de6c16531a9fa0fa55e&query=' + value
@@ -15,8 +15,8 @@ function Header() {
                 });
             });
         }
-    }
-    function getTopRated() {
+    };
+    const getTopRated = () => {
         fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=7559ebc59bb34de6c16531a9fa0fa55e').then(function (
             response
         ) {
@@ -24,7 +24,7 @@ function Header() {
                 dispatch(setMovies(data.results));
             });
         });
-    }
+    };
     return (
         <header className='header bg-dark'>
             <div className='search'>
